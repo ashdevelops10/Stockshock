@@ -1,0 +1,906 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <!--====== Title ======-->
+  <title>Stock Shock</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--====== Favicon Icon ======-->
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+
+  <!--======  CSS for icons ======-->
+  <link rel="stylesheet" href="assets/css/LineIcons.css">
+
+  <!--====== Bootstrap CSS ======-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css"> 
+
+  <!--====== Default CSS for spacing ======-->
+  <link rel="stylesheet" href="assets/css/default.css">
+
+  <!--CSS for color style,and other styling-->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+ 
+  <!-- Javascipt link for chart and real time data fetch-->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.27.3/dist/apexcharts.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+  <!--<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>-->
+</head>
+
+<body>
+  <!--<py-script src="External code.py">  </py-script>-+-> 
+        
+  
+  
+    
+    <--NAVIGATION BAR-->
+
+  <section class="navbar-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <nav class="navbar navbar-expand-lg">
+
+            <a class="navbar-brand" href="#">
+              <img src="assets/images/logo.svg" alt="Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTwo"
+              aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+              <span class="toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+              <ul class="navbar-nav m-auto">
+                
+                <li class="nav-item"><a class="page-scroll" href="#Stockgraph">Stock Graph</a></li>
+                <li class="nav-item"><a class="page-scroll" href="#Howtoinvest">Evaluate Financial</a></li>
+                <li class="nav-item"><a class="page-scroll" href="#News">Market Trends & Prediction</a></li>
+                <li class="nav-item"><a class="page-scroll" href="#Investmentdecisions">Investment Decisions</a>
+                </li>
+                
+                <li class="nav-item"><a class="page-scroll" href="#contact">Contact us</a></li>
+              </ul>
+            </div>
+
+          </nav> <!-- navbar -->
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </section>
+
+  <!--NAVIGATION BAR ENDS-->
+
+ 
+ 
+ 
+  <!--SLIDER PART START-->
+
+  <section id="home" class="slider_area">
+    <div id="carouselThree" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselThree" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselThree" data-slide-to="1"></li>
+        <li data-target="#carouselThree" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="slider-content">
+                  <h1 class="title">Welcome to Stock Shock</h1>
+                  <p class="text">We will tell you 5 steps <br/> How to invest in stocks for long term.</p>
+
+                </div>
+              </div>
+            </div> <!-- row -->
+          </div> <!-- container -->
+          <div class="slider-image-box d-none d-lg-flex align-items-end">
+            <div class="slider-image">
+              <img src="assets/images/slider/1.png" alt="Hero">
+            </div> <!-- slider-imgae -->
+          </div> <!-- slider-imgae box -->
+        </div> <!-- carousel-item -->
+
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="slider-content">
+                  <h1 class="title">Stock Market</h1>
+                  <p class="text"> The stock market is a platform where investors can buy and sell
+                    shares of publicly traded companies. The price of a stock is determined by
+                    supply and demand, and the market is regulated to ensure fair and transparent
+                    trading. To participate in the stock market, investors need to work with a
+                    brokerage firm that is a member of the exchange where the shares are listed.</p>
+                  <ul class="slider-btn rounded-buttons">
+                    <li><a class="main-btn rounded-one" href="https://www.yahoofinance.com/" target="_blank">CLICK TO
+                        KNOW MORE</a></li>
+
+                  </ul>
+                </div> <!-- slider-content -->
+              </div>
+            </div> <!-- row -->
+          </div> <!-- container -->
+          <div class="slider-image-box d-none d-lg-flex align-items-end">
+            <div class="slider-image">
+              <img src="assets/images/slider/2.png" alt="Hero">
+            </div> <!-- slider-imgae -->
+          </div> <!-- slider-imgae box -->
+        </div> <!-- carousel-item -->
+
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="slider-content">
+                  <h1 class="title">Stock indices </h1>
+                  <p class="text">There are many stock indices, but some of the most widely followed
+                    include the S&P 500, Dow Jones Industrial Average, and NASDAQ Composite.
+
+                    The S&P 500 is an index of 500 large-cap stocks listed on the New York Stock
+                    Exchange (NYSE) or NASDAQ.
+                    The Dow Jones Industrial Average, also known as the Dow, is an index of 30
+                    large-cap companies listed on the NYSE.
+                    The NASDAQ Composite is an index of more than 3,000 companies listed on the
+                    NASDAQ exchange.</p>
+                  <ul class="slider-btn rounded-buttons">
+                    <li><a class="main-btn rounded-one" href="https://www.yahoofinance.com/" target="_blank">CLICK TO
+                        KNOW MORE</a></li>
+                  </ul>
+                </div> <!-- slider-content -->
+              </div>
+            </div> <!-- row -->
+          </div> <!-- container -->
+          <div class="slider-image-box d-none d-lg-flex align-items-end">
+            <div class="slider-image">
+              <img src="assets/images/slider/3.png" alt="Hero">
+            </div> <!-- slider-imgae -->
+          </div> <!-- slider-imgae box -->
+        </div> 
+      </div>
+
+      <a class="carousel-control-prev" href="#carouselThree" role="button" data-slide="prev">
+        <i class="lni lni-arrow-left"></i>
+      </a>
+      <a class="carousel-control-next" href="#carouselThree" role="button" data-slide="next">
+        <i class="lni lni-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!--SLIDER PART ENDS -->
+
+ 
+
+  <!--STEP 1 STARTS-->
+
+  <section  id= "Researchcompanies" class="features-area"
+  >
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <h3 class="title">Research Companies</h3>
+          
+          <p class="text"> Step 1: Do your research and identify companies that you believe have potential for growth and
+            are likely to perform well in the future. Some factors to consider include the company's
+            financial health, management team, competitive advantages, and growth prospects.
+            
+    </p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="section-title text-center pb-10">
+            <div class="accordion" id="accordionExample">
+              <div class="pt-30 text-right">
+                <a class="showMore collapsed" type="Submit" data-toggle="collapse" data-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo">
+                  Show More
+                </a>
+                <div id="collapseTwo" class="collapse text-left" aria-labelledby="headingTwo"
+                  data-parent="#accordionExample">
+                 
+              
+                  <p class="text"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- container -->
+  </section>
+
+
+
+
+  <!-- Stocks Graph Starts -->
+  <section id="Stockgraph" class="features-area stockGraph">
+    <div class="container">
+      <div class="section-title text-center pb-10">
+        <h3 class="title">Stock Graph and Details</h3>
+        <p class="text"> Analyze the company's financial statements to evaluate its performance.</p>
+<!-- table-->
+<head>
+  <title>Top 20 Companies in Stock Market</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>.
+<body>
+  <h4>Companies in Stock Market</h4><br/>
+  <table>
+    <thead>
+      <tr>
+        <th>Company Symbol</th>
+        <th>Company Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>AAPL</td>
+        <td>Apple Inc.</td>
+      </tr>
+      <tr>
+        <td>MSFT</td>
+        <td>Microsoft Corporation</td>
+      </tr>
+      <!-- Add more rows for other companies -->
+      <tr>
+        <td>GOOGL</td>
+        <td>Alphabet Inc.</td>
+      </tr>
+      <tr>
+        <td>AMZN</td>
+        <td>Amazon</td>
+      </tr>
+      <tr>
+        <td>FB</td>
+        <td>Facebook</td>
+      </tr>
+      <tr>
+        <td>INTC</td>
+        <td>Intel Corporation </td>
+      </tr>
+      <tr>
+        <td>CSCO</td>
+        <td>Cisco Systems</td>
+      </tr>
+      <tr>
+        <td>CMCSA</td>
+        <td>Comcast Corporation</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+<!--table ends-->
+
+
+      </div>
+       <!-- section title -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-3"></div>
+          <div class="col-md-5">
+            <label for="symbol">Enter Company Symbol:</label>
+            <input class="form-control" type="text" id="symbol" name="symbol"></div>
+          <div class="col-md-4 text-left">
+            <p style="height: 31px">&nbsp;</p>
+            <button class="btn btn-primary " type="button" onclick="getStockData()">Submit</button>
+          </div>
+        </div>
+        <div class="row justify-content-center pt-30">
+          <div class="col-md-6 card">
+            <div id="chart"></div>
+          </div>
+          <div class="col-md-6 card">
+            <div class="pt-30" id="details"></div>
+          </div>
+          <div class="section-title text-center pb-30">
+
+            <script>
+              function getStockData() {
+                const symbol = document.getElementById("symbol").value;
+                const apiKey = "Your API key";
+                const url =
+                  `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}&apikey=${apiKey}`;
+                $.getJSON(url, function(data) {
+                  if (data["Error Message"]) {
+                    alert("Invalid Symbol");
+                  } else {
+                    const seriesData = [];
+                    for (const key in data["Time Series (Daily)"]) {
+                      const x = new Date(key);
+                      const y = parseFloat(data["Time Series (Daily)"][key][
+                        "4. close"
+                      ]);
+                      seriesData.push([x, y]);
+                    }
+                    const options = {
+                      chart: {
+                        type: "area",
+                        height: 350,
+                        zoom: {
+                          enabled: false
+                        }
+                      },
+                      dataLabels: {
+                        enabled: false
+                      },
+                      series: [{
+                        name: symbol,
+                        data: seriesData
+                      }],
+                      xaxis: {
+                        type: "datetime"
+                      },
+                      yaxis: {
+                        tooltip: {
+                          enabled: true
+                        }
+                      }
+                    };
+                    const chart = new ApexCharts(document.querySelector("#chart"),
+                      options);
+                    chart.render();
+                    const latestPrice = data["Time Series (Daily)"][Object.keys(
+                      data["Time Series (Daily)"])[0]]["4. close"];
+                    const latestDate = Object.keys(data["Time Series (Daily)"])[0];
+                    const change = parseFloat(latestPrice) - parseFloat(data[
+                      "Time Series (Daily)"][Object.keys(data[
+                      "Time Series (Daily)"])[1]]["4. close"]);
+                    const changePercentage = (change / parseFloat(data[
+                      "Time Series (Daily)"][Object.keys(data[
+                      "Time Series (Daily)"])[1]]["4. close"])) * 100;
+                    const details =
+                      `<h2>${symbol}</h2>
+                      <p>Latest Price: ${latestPrice}</p>
+                      <p>Latest Date: ${latestDate}</p>
+                    <p>Change: ${change.toFixed(2)} (${changePercentage.toFixed(2)}%)</p>`;
+                    document.getElementById("details").innerHTML = details;
+                  }
+                });
+              }
+              // Generate random symbol and display its data on page load
+              const symbols = ["AAPL", "AMZN", "GOOGL", "MSFT", "NFLX", "TSLA"];
+              const randomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
+              document.getElementById("symbol").value = randomSymbol;
+              getStockData();
+            </script>
+            </p>
+
+          </div>
+          <!--section title -->
+        </div>
+  </section>
+
+  <!--Stocks Graph ends-->
+
+
+  <!-- Step 2 starts-->
+  <section id="Howtoinvest" class="features-area performanceSection">
+    <div class="container">
+      <div class="section-title text-center pb-10">
+        <h3 class="title">Evaluate Financial Performance</h3>
+  
+        <p class="text"> Step2: Analyze the company's financial statements to evaluate its performance.</p>
+      </div> <!-- section title -->
+      <div class="container">
+        <div class="row justify-content-center">
+
+          <div class="section-title text-center pb-30">
+             
+              <p class="text"></p>
+              You can use formulas such as Return on Equity (ROE), Price to Earnings Ratio (P/E
+              Ratio), and Dividend Yield to determine how profitable the company is, how expensive
+              its stock is, and how much dividend income it pays out. </p>
+              <br/>
+               <div class="table">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Company Name</th>
+                        <th>EPS(Earning Per Share)</th>
+                        <th>Dividend Per share</th>
+                      </tr>
+                    </thead>
+               <tbody>
+                <td>Google</td>
+                <td>4.73 </td>
+              </tr>
+              <tr>
+                <td>Microsoft</td>
+                <td>9.24</td>
+                <td>2.72</td>
+              </tr>
+              <tr>
+                <td>Cisco Systems</td>
+                <td>2.73</td>
+                <td>1.56</td>
+              </tr>
+              <tr>
+                <td>PepsiCo</td>
+                <td>4.77</td>
+                <td>5.06</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+          </div> <!-- section title -->
+
+          <div class="col-lg-4 col-md-7 col-sm-9">
+            <div class="single-features mt-40">
+              <div class="features-title-icon d-flex justify-content-between">
+                <h3 class="stockTitleOne"><a href="#" target="_blank">P/E calculator</a></h3>
+
+              </div>
+              <div class="features-content">
+                <div class="form-group"><label for="stock-price">Stock Price:</label>
+                  <input class="form-control" type="number" id="stock-price"></div>
+
+                <div class="form-group"><label for="earnings-per-share">Earning/Share:</label>
+                  <input class="form-control" type="number" id="earnings-per-share"></div>
+
+                <div class="form-group pt-5"><button class="btn btn-primary btn-block" onclick="calculatePE()">Calculate P/E
+                    Ratio</button></div>
+                
+                <p id="pe-ratio"></p>
+                <script>
+                  function calculatePE() {
+                    // Get the user input for the stock price and earnings per share
+                    let stockPrice = parseFloat(document.getElementById("stock-price")
+                      .value);
+                    let earningsPerShare = parseFloat(document.getElementById(
+                      "earnings-per-share").value);
+                    // Calculate the P/E ratio
+                    let peRatio = stockPrice / earningsPerShare;
+                    // Display the P/E ratio to the user
+                    document.getElementById("pe-ratio").innerHTML =
+                      `The P/E ratio is ${peRatio.toFixed(2)}.`;
+                      
+                  }
+                </script>
+                <hr/>
+                <p>  If ratio < 15 or lower = low P/E ratio while <br/> ratio > 20 or higher= high P/E ratio.
+                </p>
+
+              </div>
+            </div> <!-- single features -->
+          </div>
+          <!-- ends-->
+          <div class="col-lg-4 col-md-7 col-sm-9">
+            <div class="single-features mt-40">
+              <div class="features-title-icon d-flex justify-content-between">
+                <h3 class="stockTitleOne"><a href="#" target="_blank">Divident Yeild Calculator</a></h3>
+
+              </div>
+              <div class="features-content">
+                <div class="form-group"><label for="dividend-per-share">Dividend Per Share:</label>
+                  <input class="form-control" type="number" id="dividend-per-share"></div>
+                <div class="form-group"> <label for="stock-price">Stock Price:</label>
+                  <input class="form-control" type="number" id="stock-price"></div>
+                <div class="form-group pt-5"><button class="btn btn-primary btn-block"
+                    onclick="calculateDividendYield()">Calculate Dividend Yield</button></div>
+                <p id="dividend-yield"></p>
+                <script>
+                  function calculateDividendYield() {
+                    // Get the user input for the dividend per share and stock price
+                    let dividendPerShare = parseFloat(document.getElementById(
+                      "dividend-per-share").value);
+                    let stockPrice = parseFloat(document.getElementById("stock-price")
+                      .value);
+                    // Calculate the dividend yield
+                    let dividendYield = (dividendPerShare / stockPrice) * 100;
+                    // Display the dividend yield to the user
+                    document.getElementById("dividend-yield").innerHTML =
+                      `The dividend yield is ${dividendYield.toFixed(2)}%.`;
+                  }
+                </script>
+
+              </div>
+            </div> <!-- single features -->
+          </div>
+          <!-- ends-->
+
+          <!--Return of Starts -->
+          <div class="col-lg-4 col-md-7 col-sm-9">
+            <div class="single-features mt-40">
+              <div class="features-title-icon d-flex justify-content-between">
+                <h3 class="stockTitleOne"><a href="#" target="_blank">Return Of Equity</a></h3>
+              </div>
+              <div class="features-content">
+                <form>
+                  <div class="form-group"> <label for="net_income">Net Income:</label>
+                    <input class="form-control" type="number" id="net_income" name="net_income" required>
+                  </div>
+                  <div class="form-group"><label for="total_equity">Total Equity:</label>
+                    <input class="form-control" type="number" id="total_equity" name="total_equity" required></div>
+                  <div class="form-group pt-5"><button class="btn btn-primary btn-block" type="button"
+                      onclick="calculate()">Calculate</button></div>
+
+                </form>
+                <div id="result"></div>
+
+                <script>
+                  function calculate() {
+                    var netIncome = parseFloat(document.getElementById("net_income").value);
+                    var totalEquity = parseFloat(document.getElementById("total_equity")
+                      .value);
+                    var roe = (netIncome / totalEquity) * 100;
+                    document.getElementById("result").innerHTML = "Return on Equity: " + roe
+                      .toFixed(2) + "%";
+                  }
+                </script>
+              </div>
+            </div> <!-- single features -->
+          </div>
+          <!--Return of Equity Ends -->
+
+        </div> <!-- row -->
+      </div> <!-- container -->
+  </section>
+
+  <!--====== FEATRES TWO PART ENDS ======-->
+
+  <!--====== step3  START ======-->
+
+  <section id="News" class="portfolio-area portfolio-four pb-100">
+    <style background: url() right bottom no-repeat, url(paper.gif) left top repeat;></style>
+
+    <div class="container">
+
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="section-title text-center pb-10">
+            <h3 class="title">Look at Market Trends</h3>
+            <p class="text">
+              Step 3: Analyze market trends and factors that may affect the performance of the company and its
+              stock. You can use tools such as technical analysis, which involves studying stock
+              charts and patterns to predict future price movements, and fundamental analysis, which
+              involves analyzing economic and industry trends to predict future performance.</p>
+              <div class="light-rounded-buttons mt-30">
+                <a href="https://www.cnbctv18.com/" target="_blank" rel="nofollow" class="main-btn light-rounded-two">Live
+                  News</a>
+            
+              </div>
+          </div> <!-- section title -->
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </section>
+
+
+<section id="Market" class="contact-area howtoinvest">
+  <div class="section-title text-center pb-10">
+    <h3 class="title">Predict Stock Price</h3>
+    <p class="text">There are many different approaches and techniques that can be used to predict stock
+      prices using artificial intelligence (AI).</p>
+  </div> <!-- section title -->
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="section-title text-center pb-30">
+        <p class="text">It is important to note that predicting stock prices is a complex and
+          challenging task, and there is no single "best" AI approach that will work for everyone.
+          The effectiveness of each approach will depend on factors such as the amount and quality
+          of data available, the specific nature of the market being analyzed, and the skill and
+          expertise of the individual or team using the AI tools. </p>
+      </div> <!-- section title -->
+      
+      <!-- row -->
+
+</section>
+
+<section id="Investmentdecisions" class="about-area">
+  <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title text-center pb-10">
+            <h3 class="title"> Make Investment Decisions </h3> 
+            <p class="text"> Step 4: Based on your research and analysis, decide which stocks to invest in. It's important to diversify your portfolio by investing in multiple companies across different industries to minimize risk. </p>
+            
+          </div> <!-- section title -->
+        </div>
+      </div>
+  </div>
+</section>
+
+
+
+  <!--====== Step 5 START ======-->
+
+  <section id="Monitorperformance" class="pricing-area ">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-10">
+          <div class="section-title text-center pb-25">
+            <h3 class="title"> Monitor Performance</h3>
+                <p class="text"> Step 5: Keep track of the performance of your investments and make adjustments as needed. You should regularly review your portfolio and make changes based on changing market conditions or changes in your investment goals.</p>
+                <br/><hr/>
+              <h5>But, If your're a new investor follow this. </h5>
+          </div> <!-- section title -->
+        </div>
+      </div> <!-- row -->
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-7 col-sm-9">
+          <div class="pricing-style mt-30">
+            <div class="pricing-icon text-center">
+
+            </div>
+            <div class="pricing-header text-center">
+              <h5 class="sub-title">1. Get a PAN card</h5>
+              <p class="month">The first step to investing in Indian stocks is to obtain a
+                Permanent Account Number (PAN) card. It is a unique identification number issued
+                by the Indian Income Tax Department and is mandatory to invest in Indian stocks.
+              </p>
+            </div>
+
+          </div> <!-- pricing style one -->
+        </div>
+
+        <div class="col-lg-4 col-md-7 col-sm-9">
+          <div class="pricing-style mt-30">
+            <div class="pricing-icon text-center">
+              <img src="#" alt="">
+            </div>
+            <div class="pricing-header text-center">
+              <h5 class="sub-title">2. Open a Demat account</h5>
+              <p class="month">A Demat account is an electronic account that holds your shares and
+                securities in a digital format. To open a Demat account, you will need to
+                approach a Depository Participant (DP), which can be a bank or a brokerage firm.
+              </p>
+            </div>
+          </div> <!-- pricing style one -->
+        </div>
+
+        <div class="col-lg-4 col-md-7 col-sm-9">
+          <div class="pricing-style mt-30">
+            <div class="pricing-icon text-center">
+              <img src="#" alt="">
+            </div>
+            <div class="pricing-header text-center">
+              <h5 class="sub-title">3. Choose a broker</h5>
+              <p class="month">A broker is an intermediary that helps you buy and sell stocks in
+                the stock market. You can choose a full-service broker or a discount broker,
+                depending on your requirements.</p>
+            </div>
+          </div> <!-- pricing style one -->
+          <!-- Copy of pricing-->
+
+          <!--Copy ends-->
+        </div>
+      </div> <!-- row -->
+      <!--Starts copy-->
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-10">
+          <!-- section title -->
+        </div>
+      </div> <!-- row -->
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-7 col-sm-9">
+          <div class="pricing-style mt-30">
+            <div class="pricing-icon text-center">
+              <img src="#" alt="">
+            </div>
+            <div class="pricing-header text-center">
+              <h5 class="sub-title">4.
+                Research and select stocks
+              </h5>
+              <p class="month">Before investing in Indian stocks, it is essential to research the
+                companies you are interested in and evaluate their financial performance,
+                management, and growth prospects. You can use various online resources,
+                including financial news portals, company websites, and analyst reports, to
+                gather information.</p>
+            </div>
+          </div> <!-- pricing style one -->
+        </div>
+
+        <div class="col-lg-4 col-md-7 col-sm-9">
+          <div class="pricing-style mt-30">
+            <div class="pricing-icon text-center">
+              <img src="#" alt="">
+            </div>
+            <div class="pricing-header text-center">
+              <h5 class="sub-title">5. Place your order</h5>
+              <p class="month">Once you have selected the stocks you wish to invest in, you can
+                place an order through your broker's trading platform or mobile app. You can
+                place a market order, which executes at the prevailing market price, or a limit
+                order, which executes at a specific price</p>
+            </div>
+          </div> <!-- pricing style one -->
+        </div>
+
+        <div class="col-lg-4 col-md-7 col-sm-9">
+          <div class="pricing-style mt-30">
+            <div class="pricing-icon text-center">
+              <img src="#" alt="">
+            </div>
+            <div class="pricing-header text-center">
+              <h5 class="sub-title">6.Monitor your portfolio</h5>
+              <p class="month">Investing in stocks is a long-term game, and it is essential to
+                keep track of your portfolio regularly. You can monitor your stocks' performance
+                through your broker's trading platform or by regularly checking financial news
+                portals.</p>
+            </div>
+          </div> <!-- pricing style one -->
+          <!-- Copy of pricing-->
+
+          <!--Copy ends-->
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </section>
+
+  <!--====== PRINICNG ENDS ======-->
+
+  
+ 
+
+ 
+
+  <section id="contact" class="contact-area">
+    <div class="container">
+      <div class="section-title text-center pb-10">
+       
+         <!-- contact info -->
+         <p class="text"><b>It's important to remember that investing in the stock market involves risks, and
+          there
+          is no guarantee that any particular investment will result in higher returns. It's
+          essential to do your research, evaluate companies and their stocks using formulas and
+          strategies, and regularly monitor your portfolio to make informed investment decisions.</b></p><br/> <br/><hr/>
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="contact-wrapper form-style-two">
+              <h4 class="contact-title pb-10"><i class="lni lni-envelope"></i> Leave <span>A
+                  Message.</span></h4>
+  
+              <form id="contact-form" action="assets/contact.php" method="post">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-input mt-25">
+                      <label>Name</label>
+                      <div class="input-items default">
+                        <input name="name" type="text" placeholder="Name">
+                        <i class="lni lni-user"></i>
+                      </div>
+                    </div> <!-- form input -->
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-input mt-25">
+                      <label>Email</label>
+                      <div class="input-items default">
+                        <input type="email" name="email" placeholder="Email">
+                        <i class="lni lni-envelope"></i>
+                      </div>
+                    </div> <!-- form input -->
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-input mt-25">
+                      <label>Message</label>
+                      <div class="input-items default">
+                        <textarea name="massage" placeholder="Massage"></textarea>
+                        <i class="lni lni-pencil-alt"></i>
+                      </div>
+                    </div> <!-- form input -->
+                  </div>
+                  <p class="form-message"></p>
+                  <div class="col-md-12">
+                    <div class="form-input light-rounded-buttons mt-30">
+                      <button class="main-btn light-rounded-two">Send Message</button>
+                    </div> <!-- form input -->
+                  </div>
+                </div> <!-- row -->
+              </form>
+            </div> <!-- contact wrapper form -->
+          </div>
+        </div> <!-- row -->
+
+        <div class="row">
+          <div class="col-md-12 pt-115">
+            <h3 class="title">Contact Us</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="contact-info pt-30">
+              <div class="row">
+                <div class="col-lg-4 col-md-6">
+                  <div class="single-contact-info contact-color-1 mt-30 d-flex ">
+                    <div class="contact-info-icon">
+                      <i class="lni lni-map-marker"></i>
+                    </div>
+                    <div class="contact-info-content media-body">
+                      <p class="text"> Lovely Professional University <br>1202 Jalandhar.</p>
+                    </div>
+                  </div> <!-- single contact info -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="single-contact-info contact-color-2 mt-30 d-flex ">
+                    <div class="contact-info-icon">
+                      <i class="lni lni-envelope"></i>
+                    </div>
+                    <div class="contact-info-content media-body">
+                      <p class="text">hello@gmail.com</p>
+                      <p class="text">support@gmail.com</p>
+                    </div>
+                  </div> <!-- single contact info -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="single-contact-info contact-color-3 mt-30 d-flex ">
+                    <div class="contact-info-icon">
+                      <i class="lni lni-phone"></i>
+                    </div>
+                    <div class="contact-info-content media-body">
+                      <p class="text">+91 789-321-654</p>
+                      <p class="text">+91 985-458-609</p>
+                    </div>
+                  </div> <!-- single contact info -->
+                </div>
+              </div> <!-- row -->
+            </div>
+          </div>
+        </div> <!-- row -->
+      </div>
+    </div>
+  </section>
+
+  <!--====== CONTACT PART ENDS ======-->
+
+  <!--====== FOOTER PART START ======-->
+  <footer class="copyRight">
+    <p> © By Group KC326</p>
+  </footer>
+  
+
+  <!--back to top-->
+  <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+
+  <!--====== PART ENDS ======-->
+
+  <!--====== Bootstrap js  for slider======-->
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <!--====== Main js ======-->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

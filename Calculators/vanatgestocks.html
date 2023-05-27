@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Graph and Details</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.27.3/dist/apexcharts.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <h1>Stock Graph and Details</h1>
+    <form>
+        <label for="symbol">Enter Company Symbol:</label>
+        <input type="text" id="symbol" name="symbol">
+        <button type="button" onclick="getStockData()">Submit</button>
+    </form>
+    <div id="chart"></div>
+    <div id="details"></div>
+    <script>
+        function getStockData() {
+            const symbol = document.getElementById("symbol").value;
+            const apiKey = "Your API key";
+            const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}&apikey=${apiKey}`;
+            $.getJSON(url, function (data) {
+                if (data["Error Message"]) {
+                    alert("Invalid Symbol");
+                } else {
+                    const seriesData = [];
+                    for (const key in data["Time Series (Daily)"]) {
+                        const x = new Date(key);
+                        const y = parseFloat(data["Time Series (Daily)"][key]["4. close"]);
+                        seriesData.push([x, y]);
+                    }
+                    const options = {
+                        chart: {
+                            type: "area",
+                            height: 350,
+                            zoom: {
+                                enabled: false
+                            }
+                        },
+                        dataLabels: {
+                            enabled: false
+                        },
+                        series: [{
+                            name: symbol,
+                            data: seriesData
+                        }],
+                        xaxis: {
+                            type: "datetime"
+                        },
+                        yaxis: {
+                            tooltip: {
+                                enabled: true
+                            }
+                        }
+                    };
+                    const chart = new ApexCharts(document.querySelector("#chart"), options);
+                    chart.render();
+                    const latestPrice = data["Time Series (Daily)"][Object.keys(data["Time Series (Daily)"])[0]]["4. close"];
+                    const latestDate = Object.keys(data["Time Series (Daily)"])[0];
+                    const change = parseFloat(latestPrice) - parseFloat(data["Time Series (Daily)"][Object.keys(data["Time Series (Daily)"])[1]]["4. close"]);
+                    const changePercentage = (change / parseFloat(data["Time Series (Daily)"][Object.keys(data["Time Series (Daily)"])[1]]["4. close"])) * 100;
+                    const details = `<h2>${symbol}</h2>
+                                       <p>Latest Price: ${latestPrice}</p>
+                                       <p>Latest Date: ${latestDate}</p>
+                                       <p>Change: ${change.toFixed(2)} (${changePercentage.toFixed(2)}%)</p>`;
+                    document.getElementById("details").innerHTML = details;
+                }
+            });
+        }
+        
+        // Generate random symbol and display its data on page load
+        const symbols = ["AAPL", "AMZN", "GOOGL", "MSFT", "NFLX", "TSLA"];
+        const randomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
+        document.getElementById("symbol").value = randomSymbol;
+        getStockData();
+    </script>
+</body>
+</html>

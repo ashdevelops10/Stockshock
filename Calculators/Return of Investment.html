@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ROI Calculator</title>
+  </head>
+  <body>
+    <h1>ROI Calculator</h1>
+    <label for="investment-amount">Investment Amount:</label>
+    <input type="number" id="investment-amount">
+    <br><br>
+    <label for="investment-return">Investment Return:</label>
+    <input type="number" id="investment-return">
+    <br><br>
+    <button onclick="calculateROI()">Calculate ROI</button>
+    <br><br>
+    <p id="roi"></p>
+    <script>
+      function calculateROI() {
+        // Get the user input for the investment amount and investment return
+        let investmentAmount = parseFloat(document.getElementById("investment-amount").value);
+        let investmentReturn = parseFloat(document.getElementById("investment-return").value);
+
+        // Calculate the ROI
+        let roi = ((investmentReturn - investmentAmount) / investmentAmount) * 100;
+
+        // Display the ROI to the user
+        document.getElementById("roi").innerHTML = `The ROI is ${roi.toFixed(2)}%.`;
+      }
+    </script>
+  </body>
+</html>
